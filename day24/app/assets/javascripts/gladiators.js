@@ -10,14 +10,14 @@ $(document).ready(function() {
       gladiator1.hp = $(this).attr("gladiator_hp");
       gladiator1.damage = $(this).attr("gladiator_damage");
       gladiator1.name = $(this).attr("gladiator_name");
-      gladiator1.image = $(this).attr("gladiator_image");
+      gladiator1.image = $(this).attr("gladiator_image") || "/assets/stormtrooper.jpg";
       render();
       
     } else if(!gladiator2.name){
       gladiator2.hp = $(this).attr("gladiator_hp");
       gladiator2.damage = $(this).attr("gladiator_damage");
       gladiator2.name = $(this).attr("gladiator_name");
-      gladiator2.image = $(this).attr("gladiator_image");
+      gladiator2.image = $(this).attr("gladiator_image") || "/assets/stormtrooper.jpg";
       render();
          
     } 
