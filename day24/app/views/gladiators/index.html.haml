@@ -1,0 +1,25 @@
+%h1 Listing gladiators
+
+%table
+  %thead
+    %tr
+      %th Name
+      %th Hp
+      %th Damage
+      %th
+      %th
+      %th
+      
+  %tbody
+    - @gladiators.each do |gladiator|
+      %tr
+        %td= gladiator.name
+        %td= gladiator.hp
+        %td= gladiator.damage
+        %td= link_to 'Show', gladiator
+        %td= link_to 'Edit', edit_gladiator_path(gladiator)
+        %td= link_to 'Destroy', gladiator, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Gladiator', new_gladiator_path

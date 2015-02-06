@@ -1,0 +1,23 @@
+
+.gladiator1 {
+  display: inline-block;
+  width: 200px;
+  min-height: 200px;
+  background-color: green;
+}
+
+.gladiator2 {
+  display: inline-block;
+  width: 200px;
+  min-height: 200px;
+  background-color: red;
+}
+
+.battle {
+  display: none;
+}
+
+.image {
+  width: 100px;
+  height: 100px;
+}

@@ -1,0 +1,14 @@
+%h1 Welcome#index
+%p Find me in app/views/welcome/index.html.haml
+
+= link_to "Gladiators", gladiators_path
+%br
+%div.gladiator1
+%div.gladiator2
+
+%button.battle Battle
+%ul
+  - @gladiators.each do |gladiator|
+    %li
+      = gladiator.name
+      = link_to "PIck Me!", '#', class: "pick-me", gladiator_name: gladiator.name, gladiator_hp: gladiator.hp, gladiator_damage: gladiator.damage, gladiator_image: gladiator.image 

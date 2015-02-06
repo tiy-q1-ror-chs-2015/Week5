@@ -1,0 +1,15 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @gladiator.name
+%p
+  %b Hp:
+  = @gladiator.hp
+%p
+  %b Damage:
+  = @gladiator.damage
+
+= link_to 'Edit', edit_gladiator_path(@gladiator)
+\|
+= link_to 'Back', gladiators_path

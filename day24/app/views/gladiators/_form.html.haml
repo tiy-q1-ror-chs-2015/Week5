@@ -1,0 +1,22 @@
+= form_for @gladiator do |f|
+  - if @gladiator.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@gladiator.errors.count, "error")} prohibited this gladiator from being saved:"
+      %ul
+        - @gladiator.errors.full_messages.each do |msg|
+          %li= msg
+
+  .field
+    = f.label :name
+    = f.text_field :name
+  .field
+    = f.label :hp
+    = f.number_field :hp
+  .field
+    = f.label :damage
+    = f.number_field :damage
+  .field
+    = f.label :image
+    = f.text_area :image
+  .actions
+    = f.submit 'Save'
